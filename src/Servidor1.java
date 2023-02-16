@@ -1,6 +1,5 @@
 import java.io.IOException;
 import java.util.Scanner;
-import dominio.MetrosCentimetros;
 
 public class Servidor1 {
     public void  rodar () throws IOException, ClassNotFoundException{
