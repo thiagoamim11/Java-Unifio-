@@ -37,12 +37,7 @@ public class Cliente {
         ObjectInputStream ois = new ObjectInputStream(bais);
         Resposta resposta = (Resposta) ois.readObject();
 
-        System.out.println("Imprimindo a resposta na tela...");
-        System.out.println("X: " + calculadora.getX());
-        System.out.println("Operação: " + calculadora.getOperacao());
-        System.out.println("Y: " + calculadora.getY());
-        System.out.println("Resultado: " + resposta.getResultado());
-        System.out.println("Mensagem: " + resposta.getMensagem());
+
     }
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
