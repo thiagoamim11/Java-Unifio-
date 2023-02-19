@@ -5,7 +5,6 @@ import java.io.Serializable;
 public class Calculadora implements Serializable {
     private double x;
     private double y;
-
     private char operacao;
 
     public double getX() {

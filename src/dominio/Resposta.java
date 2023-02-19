@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class Resposta implements Serializable {
     private double resultado;
 
+
     private String mensagem;
 
     public double getResultado() {
