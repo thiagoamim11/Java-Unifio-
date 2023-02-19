@@ -13,7 +13,7 @@ public class Cliente1 {
         Calculadora1 calculadora1 = new Calculadora1();
         calculadora1.setMetros(20);
         calculadora1.setConversao('*');
-        calculadora1.setCentimetros(10);
+        calculadora1.setCentimetros(100);
 
         System.out.println("Realizando a conversão de objeto para bytes...");
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -38,12 +38,7 @@ public class Cliente1 {
         ObjectInputStream ois = new ObjectInputStream(bais);
         Resposta resposta = (Resposta) ois.readObject();
 
-        System.out.println("Imprimindo a resposta na tela...");
-        System.out.println("X: " + calculadora1.getMetros());
-        System.out.println("Operação: " + calculadora1.getOperacao());
-        System.out.println("Y: " + calculadora1.getCentimetros());
-        System.out.println("Resultado: " + resposta.getResultado());
-        System.out.println("Mensagem: " + resposta.getMensagem());
+
     }
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
