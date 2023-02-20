@@ -1,11 +1,12 @@
-import dominio.Calculadora2;
 import dominio.Resposta;
+import dominio.Calculadora4;
 
 import java.io.*;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 
-public class Servidor2 {
+
+public class Servidor4 {
 
     public void rodar() throws IOException, ClassNotFoundException {
         System.out.println("Iniciando o servidor...");
@@ -18,10 +19,10 @@ public class Servidor2 {
             socketEntrada.receive(pacoteEntrada);
 
             System.out.println("Realizando a conversão de bytes para objeto ...");
-            byte[] bufferCalculadora2 = pacoteEntrada.getData ();
-            ByteArrayInputStream bais = new ByteArrayInputStream ( bufferCalculadora2 );
-            ObjectInputStream ois = new ObjectInputStream ( bais );
-            Calculadora2 calculadora = (Calculadora2) ois.readObject ( );
+            byte[] bufferCalculadora4 = pacoteEntrada.getData();
+            ByteArrayInputStream bais = new ByteArrayInputStream(bufferCalculadora4);
+            ObjectInputStream ois = new ObjectInputStream(bais);
+            Calculadora4 calculadora = (Calculadora4) ois.readObject();
 
             System.out.println("Realizando a operação...");
             Resposta resposta = new Resposta();
@@ -36,12 +37,13 @@ public class Servidor2 {
             DatagramPacket pacoteSaida = new DatagramPacket(bufferResposta, bufferResposta.length, pacoteEntrada.getAddress(), pacoteEntrada.getPort());
             DatagramSocket socketSaida = new DatagramSocket();
             socketSaida.send(pacoteSaida);
-
-             }
         }
 
+    }
+
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        Servidor2 servidor = new Servidor2();
+        Servidor4 servidor = new Servidor4();
         servidor.rodar();
+
     }
 }
