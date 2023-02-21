@@ -5,7 +5,7 @@ import java.io.*;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
-
+import dominio.Calculadora5;
 public class Cliente5 {
     public void rodar() throws IOException, ClassNotFoundException {
         System.out.println("Criando objeto a ser enviado...");
