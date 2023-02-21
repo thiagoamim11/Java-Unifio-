@@ -1,4 +1,3 @@
-import dominio.Calculadora;
 import dominio.Calculadora1;
 import dominio.Resposta;
 
@@ -7,12 +6,15 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
 
-public class Cliente1 {
+public class Cliente3 {
+
     public void rodar() throws IOException, ClassNotFoundException {
         System.out.println("Criando objeto a ser enviado...");
         Calculadora1 calculadora1 = new Calculadora1();
-        calculadora1.setMetros(1);
-        calculadora1.setCentimetros(100);
+        var fahreinhet = 32;
+        var respostta = (fahreinhet - 32) * 5/9;
+
+
 
 
         System.out.println("Realizando a conversão de metros para centimetros...");
@@ -40,7 +42,7 @@ public class Cliente1 {
 
 
         System.out.println("Imprimindo a resposta na tela");
-        System.out.println(calculadora1);
+        System.out.println(respostta);
 
     }
 

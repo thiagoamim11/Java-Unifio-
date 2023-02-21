@@ -15,7 +15,7 @@ public class Calculadora1 implements Serializable {
         this.metros = metros;
     }
 
-    public double getCentimetros() {
+    public int getCentimetros() {
         return centimetros;
     }
     public void setCentimetros(int centimetros) {
